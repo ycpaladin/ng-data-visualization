@@ -1,0 +1,10 @@
+<form [formGroup]="formGroup">
+  <!-- {{ formGroup.value | json }} -->
+  <nz-form-item formGroupName="general">
+    <nz-form-label> 标题 </nz-form-label>
+    <nz-form-control>
+      <input nz-input formControlName="title" />
+    </nz-form-control>
+  </nz-form-item>
+</form>
+<!-- {{props | json}} -->

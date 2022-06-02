@@ -7,7 +7,9 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "less"
+          "style": "less",
+          "changeDetection": "OnPush",
+          "skipTests": true
         },
         "@schematics/angular:application": {
           "strict": true
@@ -31,6 +33,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.less"
             ],
             "scripts": []
@@ -99,6 +102,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.less"
             ],
             "scripts": []
@@ -107,5 +111,8 @@
       }
     }
   },
-  "defaultProject": "editable-form"
+  "defaultProject": "editable-form",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

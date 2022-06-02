@@ -1,0 +1,17 @@
+<nz-collapse n>
+  <nz-collapse-panel
+    *ngFor="let item of componentType$ | async | keyvalue"
+    [nzHeader]="item.key"
+  >
+    <nz-list>
+      <nz-list-item *ngFor="let c of item.value" (click)="add(c)">
+        icon {{ c.name }}
+      </nz-list-item>
+    </nz-list>
+  </nz-collapse-panel>
+</nz-collapse>
+<!--  cdkDropList
+      cdkDropListConnectedTo="dancer"
+      (cdkDropListDropped)="cdkDropListDropped($event)"
+     -->
+<!-- cdkDrag [cdkDragData]="c" -->
